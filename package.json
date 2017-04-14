@@ -1,0 +1,12 @@
+{
+  "name": "childrens-game-nodejs",
+  "version": "1.0.0",
+  "author": "Asheesh Karwal",
+  "scripts": {
+    "tests": "tape tests/**/*.js | tap-summary"
+  },
+  "devDependencies": {
+    "tap-summary": "^3.0.2",
+    "tape": "^4.6.3"
+  }
+}
