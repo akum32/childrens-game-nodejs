@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "author": "Asheesh Karwal",
   "scripts": {
+    "game": "node play.js",
     "tests": "tape tests/**/*.js | tap-summary"
   },
   "devDependencies": {
     "tap-summary": "^3.0.2",
     "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "minimist": "^1.2.0"
   }
 }
