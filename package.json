@@ -4,7 +4,7 @@
   "author": "Asheesh Karwal",
   "scripts": {
     "game": "node play.js",
-    "tests": "mocha"
+    "test": "mocha"
   },
   "devDependencies": {
     "chai": "^3.5.0",
