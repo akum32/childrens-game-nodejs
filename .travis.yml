@@ -1,7 +1,14 @@
 language: node_js
 node_js:
   - "7.2.0"
+addons:
+  code_climate:
+    repo_token:
+      secure: "gz3KqbAFsmJ7FNwmR3Bp2mO6FVsxZjTJfyYV7NlERjWaSJ3OWhayCVMwC40Zw1XacftADO3yVLvi8wUPju5aFyAUdQMcEoe3dhgNZ8wcv5bHoHFdJR+WsS6eVEe9g0Bg1wIR2qoIq/1Z9O7EzPffDg55i7Gqld4iIkff6GoC99NNu3su9MjZq/DJNGNP4plT+XzqA4U/nBKaBKm7I4nMw+f8LRAUfzOYq7KBNwAyKQV18V6kLXO/72iuIkdt9ybnOfuKprbmv5HPyd4tMj0EjM3KO8ndfZtIIdOy2whT3XggiVAAESbfggDLdlQKnrw7DI9FTNZ7BBN+A5XgSzEwGiSDq4tgfgdd1nUeQpgpbsRJGcuhvl1G4pX5HqHCmye0ZI0xdN6vF6UwHnzJGTD8PUJ6yzDLaelh0Pop7YsHsmfvUh3GPebllUSgNi8H0Z4lm0H9vf+WwftAwdvOyikR4qM8IOBv/DhPfG9ZQ6dBc/jQhyGEHw0YK1H8pxYqrp0lzxHtlooEb9nU5GokfLGDlntLpbssrW6tNvZTM7GyxA67hjrkNnOOSxMhiqLObCB+zQoCBCV1KQ3E3K7X0+tyaD1g+uCw54DFmgtNnBTSi1l4BoZZ7+O2XPKlBnjPAr/oREvOo70/Plc3vRD601zg9QNjitBCYv31Ded4qDyDuwk="
 install:
   - npm install
 script:
-  - npm run test
+  - npm run cover
+after_success:
+  - npm install -g codeclimate-test-reporter
+  - codeclimate-test-reporter < coverage/lcov.info
