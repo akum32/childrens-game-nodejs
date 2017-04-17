@@ -32,5 +32,5 @@ test('eliminates nothing if no items given', assert => {
 });
 
 function clockwiseEliminate(items, settings) {
-  return new ClockwiseEliminator(settings).eliminateAll(items);
+  return new ClockwiseEliminator().eliminateAll(items, settings);
 }
