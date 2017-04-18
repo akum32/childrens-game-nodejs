@@ -29,5 +29,5 @@ describe('clockwise eliminator', () => {
 });
 
 function clockwiseEliminate(items, settings) {
-  return new ClockwiseEliminator().eliminateAll(items, settings);
+  return new ClockwiseEliminator(settings).eliminateAll(items);
 }

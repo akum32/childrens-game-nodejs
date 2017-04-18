@@ -14,5 +14,5 @@ describe('game', () => {
 });
 
 function play(settings) {
-  return new Game().play(settings);
+  return new Game(settings).play();
 }
