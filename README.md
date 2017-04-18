@@ -3,7 +3,7 @@
 Pre-requisites: Nodejs v7.2.0  
 Install dependencies: `npm install`  
 Run game: `npm run game -- --noOfChildren 5 --hopCount 3`  
-Run tests: `npm run test`  
+Run tests / coverage: `npm run cover`  
 
 
 #### Out of scope
@@ -17,5 +17,4 @@ Run tests: `npm run test`
 - All `/lib` classes define immutable methods so there is no shared state / side effects. 
 
 #### Alternate design?
-
-Make `/lib/game.js` asynchronous to prevent blocking calls and potentially allow consumers to subscribe to specific events for more fined grained control. e.g. UI / Console could subscribe to an `eliminated` event and re-render itself as each child is eliminated.
+- Make `/lib/game.js` asynchronous to prevent blocking calls and potentially allow consumers to subscribe to specific events for more fined grained control. e.g. UI / Console could subscribe to an `eliminated` event and re-render itself as each child is eliminated.
