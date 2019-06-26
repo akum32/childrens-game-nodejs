@@ -24,3 +24,4 @@ Run tests / coverage: `npm run cover`
 
 #### Alternate design?
 - Make `/lib/game.js` asynchronous to prevent blocking calls and potentially allow consumers to subscribe to specific events for more fined grained control. e.g. UI / Console could subscribe to an `eliminated` event and re-render itself as each child is eliminated rather than just once at the end.
+ 
